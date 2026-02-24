@@ -35,7 +35,7 @@ export const clerkWebhooks = async (req, res)=>{
                     name:data.first_name + " " + data.last_name,
                     imageUrl: data.image_url,
                 }
-                await User.findByIdUpdate(data.id,userData)
+                await User.findByIdAndUpdate(data.id,userData)
                 res.json({})
                 break;
             }
