@@ -4,6 +4,7 @@ import User from "../models/User.js"
 //API contoller function to manage clerk user with database
 
 export const clerkWebhooks = async (req, res)=>{
+    console.log('>>> clerkWebhooks function called <<<')
     try {
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
